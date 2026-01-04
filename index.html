@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Hava Durumu | Favori Şehirler</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="page">
+
+<header class="header">
+    <h1 class="title">🌍 Hava Durumu Paneli</h1>
+    <p class="subtitle">Şehir ara, hava durumunu gör ve favorilerine ekle</p>
+</header>
+
+<main class="container">
+
+    <!-- Arama Alanı -->
+    <section class="search-section">
+        <label for="cityInput" class="search-label">Şehir adı</label>
+        <div class="search-box">
+            <input
+                id="cityInput"
+                type="text"
+                placeholder="İstanbul"
+                autocomplete="off"
+            >
+            <button class="search-button" onclick="getWeather()">
+                🔍 Getir
+            </button>
+        </div>
+    </section>
+
+    <!-- Hava Durumu Kartı -->
+    <section
+        id="weatherCard"
+        class="weather-card hidden"
+        aria-live="polite"
+    >
+        <div class="weather-header">
+            <div id="icon" class="weather-icon">☀️</div>
+            <h2 id="cityName" class="weather-city"></h2>
+        </div>
+
+        <div class="weather-info">
+            <p id="temp" class="weather-temp"></p>
+            <p id="wind" class="weather-wind"></p>
+        </div>
+
+        <button class="favorite-button" onclick="addFavorite()">
+            ⭐ Favorilere Ekle
+        </button>
+    </section>
+
+    <!-- Favoriler -->
+    <section class="favorites-section">
+        <h3 class="favorites-title">⭐ Favori Şehirler</h3>
+        <ul id="favoritesList" class="favorites-list">
+            <!-- JS ile doldurulacak -->
+        </ul>
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
