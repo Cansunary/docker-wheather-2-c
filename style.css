@@ -1,0 +1,201 @@
+/* ======================
+   GENEL
+====================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
+    transition: background 0.6s ease;
+    color: #333;
+}
+
+/* ======================
+   HEADER
+====================== */
+.header {
+    text-align: center;
+    padding: 30px 15px 10px;
+}
+
+.title {
+    margin: 0;
+    font-size: 28px;
+}
+
+.subtitle {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+/* ======================
+   CONTAINER
+====================== */
+.container {
+    max-width: 420px;
+    margin: 20px auto 40px;
+    background: #ffffff;
+    padding: 25px 22px;
+    border-radius: 16px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* ======================
+   SEARCH
+====================== */
+.search-section {
+    margin-bottom: 20px;
+}
+
+.search-label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+input:focus {
+    border-color: #4f7cff;
+    box-shadow: 0 0 0 2px rgba(79, 124, 255, 0.2);
+}
+
+button {
+    padding: 12px 14px;
+    font-size: 14px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background: #4f7cff;
+    color: white;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    background: #3a63d8;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* ======================
+   WEATHER CARD
+====================== */
+.weather-card {
+    text-align: center;
+    padding: 22px 15px;
+    border-radius: 14px;
+    margin-bottom: 22px;
+    background: #f7f9fc;
+    animation: fadeIn 0.5s ease;
+}
+
+.weather-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-icon {
+    font-size: 64px;
+    margin-bottom: 6px;
+}
+
+.weather-city {
+    margin: 5px 0 10px;
+    font-size: 20px;
+}
+
+.weather-info p {
+    margin: 6px 0;
+    font-size: 15px;
+}
+
+/* ======================
+   FAVORITES
+====================== */
+.favorites-section {
+    margin-top: 10px;
+}
+
+.favorites-title {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.favorites-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.favorite-item {
+    background: linear-gradient(to right, #e0ecff, #f2f6ff);
+    margin-bottom: 8px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+}
+
+.favorite-item:hover {
+    background: linear-gradient(to right, #cddfff, #e8efff);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* ======================
+   HELPERS
+====================== */
+.hidden {
+    display: none;
+}
+
+/* ======================
+   ANIMATIONS
+====================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======================
+   RESPONSIVE
+====================== */
+@media (max-width: 480px) {
+    .container {
+        margin: 10px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+}
